@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#4b1260">
+<title>Happy Birthday, liebe Ramona!</title>
+<style>
+:root{--bg:#18051f;--card:#2a0d38;--text:#fff8ff;--muted:#e9d7ee;--gold:#f2c96d;--red:#ff66c4;--violet:#8a2be2;--purple:#5a1675}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% 0,#6d2388 0,#2b0b3a 40%,#140419 100%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;overflow-x:hidden}
+main{width:min(92%,720px);margin:auto;padding:0 0 48px}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:28px 12px}.hero-inner{animation:rise 1s ease both}.eyebrow{letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-size:.8rem}.hero h1{font-size:clamp(2.8rem,12vw,5.8rem);line-height:.95;margin:.3em 0 .2em}.hero p{font-size:1.18rem;color:var(--muted)}.down{position:absolute;bottom:28px;font-size:1.8rem;animation:bob 1.5s infinite}
+.card{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.12);box-shadow:0 24px 70px rgba(0,0,0,.38);border-radius:28px;padding:clamp(24px,6vw,46px);margin:24px 0;backdrop-filter:blur(10px)}
+.message p{font-size:clamp(1.05rem,4vw,1.25rem);line-height:1.75;margin:0 0 1.35em;opacity:0;transform:translateY(18px);transition:.8s ease}.message p.show{opacity:1;transform:none}.heart{color:#ff727c}.gift{text-align:center}.gift .tag{color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase}.gift h2{font-size:clamp(2rem,8vw,3.6rem);margin:.3em 0}.tyres{display:flex;justify-content:center;align-items:flex-end;gap:0;margin:30px -10px 20px;flex-wrap:nowrap;padding:18px 8px 8px;border-radius:24px;background:radial-gradient(ellipse at center,rgba(214,92,255,.22),transparent 68%);box-shadow:inset 0 -1px 0 rgba(242,201,109,.22)}.tyre{width:25%;max-width:132px;min-width:72px;height:auto;aspect-ratio:1/1.15;object-fit:contain;filter:drop-shadow(0 13px 10px rgba(0,0,0,.55));opacity:0;transform:translateX(-80vw) rotate(-18deg)}.tyre.roll{animation:rollin 1.05s cubic-bezier(.2,.8,.2,1) forwards}.tyre:nth-child(2){animation-delay:.18s}.tyre:nth-child(3){animation-delay:.36s}.tyre:nth-child(4){animation-delay:.54s}.product{font-size:1.1rem;line-height:1.6}.value{font-size:clamp(3rem,14vw,6.4rem);font-weight:850;color:var(--gold);letter-spacing:-.05em;margin:.25em 0}.from{font-size:1.2rem}.actions{display:grid;gap:12px;margin-top:30px}.btn{display:block;text-decoration:none;text-align:center;border-radius:16px;padding:16px 18px;font-weight:750;font-size:1.02rem;border:1px solid rgba(255,255,255,.16);color:var(--text);background:#20252c}.btn.primary{background:var(--red);border-color:transparent}.closing{text-align:center;font-size:1.15rem;line-height:1.7}.signature{font-size:1.35rem;font-weight:750;margin-top:22px}.fine{font-size:.8rem;color:#8f9399;text-align:center;margin-top:20px}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}.piece{position:absolute;top:-20px;width:8px;height:14px;background:hsl(var(--h) 75% 62%);animation:fall var(--d) linear forwards;transform:rotate(var(--r))}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(8px)}}@keyframes rollin{to{opacity:1;transform:translateX(0) rotate(0)}}@keyframes fall{to{transform:translate(var(--x),110vh) rotate(720deg)}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.message p{opacity:1;transform:none}}
+
+/* Birthday ambience */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 12%,rgba(255,130,230,.18),transparent 25%),radial-gradient(circle at 80% 18%,rgba(190,120,255,.20),transparent 28%),radial-gradient(circle at 50% 70%,rgba(242,201,109,.08),transparent 35%);z-index:-1}
+.balloon{position:fixed;bottom:-140px;width:54px;height:68px;border-radius:50% 50% 48% 48%;background:linear-gradient(145deg,#d55cff,#6f1e91);opacity:.42;z-index:0;animation:floatUp 12s linear infinite;filter:drop-shadow(0 8px 12px rgba(0,0,0,.25))}.balloon:after{content:"";position:absolute;left:50%;top:66px;width:1px;height:75px;background:rgba(255,255,255,.35)}.b1{left:4%;animation-delay:-2s}.b2{right:7%;animation-delay:-7s;transform:scale(.8)}.b3{left:72%;animation-delay:-10s;transform:scale(.65)}@keyframes floatUp{to{bottom:115vh;transform:translateX(28px) rotate(8deg)}}
+.confetti{position:fixed;top:-24px;width:10px;height:18px;border-radius:2px;z-index:9999;pointer-events:none;animation:confettiFall linear forwards}@keyframes confettiFall{0%{transform:translate3d(0,-10vh,0) rotate(0)}100%{transform:translate3d(var(--drift),110vh,0) rotate(900deg)}}
+.sparkle{position:fixed;pointer-events:none;z-index:9998;font-size:20px;animation:spark 1.4s ease-out forwards}@keyframes spark{0%{opacity:0;transform:scale(.2)}35%{opacity:1;transform:scale(1.25)}100%{opacity:0;transform:scale(.4) translateY(-30px)}}
+
+/* Subtle premium birthday accents */
+.card{border-color:rgba(242,201,109,.22);box-shadow:0 24px 70px rgba(0,0,0,.38),0 0 28px rgba(138,43,226,.10)}
+.gift{position:relative;overflow:hidden}.gift:before{content:"🎁";position:absolute;right:18px;top:16px;font-size:1.5rem;opacity:.55}.gift .tag{text-shadow:0 0 18px rgba(242,201,109,.22)}
+.value{text-shadow:0 0 24px rgba(242,201,109,.18)}
+</style>
+</head>
+<body>
+<div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div>
+<div class="confetti" id="confetti"></div>
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Für einen besonderen Menschen</div>
+    <h1>Happy Birthday,<br>liebe Ramona! <span class="heart">♥</span></h1>
+    <p>Von Herzen – von Ramin &amp; Olivier</p>
+  </div>
+  <div class="down">⌄</div>
+</section>
+
+<section class="card message" id="message">
+  <p>Wir sind happy, dich als Freundin zu haben, denn du hast immer einen Platz für uns. ❤️</p>
+  <p>Deine Herzlichkeit und dein offenes Wesen vermitteln uns jederzeit das schöne Gefühl, willkommen zu sein.</p>
+  <p>Dein Lachen, deine Geselligkeit und dein Drang, die Welt zu entdecken – dafür lieben wir dich.</p>
+  <p>Danke, dass du uns mit deiner positiven Energie fesselst und wir Teil deiner Reise sein dürfen.</p>
+  <p>Unsere Freundschaft soll noch lange und genauso gut halten wie ein Top-Pneu auf nasser Strasse. 🛞❤️</p>
+  <p><strong>Deshalb kommt dieses Geschenk von Herzen.</strong></p>
+</section>
+
+<section class="card gift" id="gift">
+  <div class="tag">Dein Geburtstagsgeschenk</div>
+  <h2>4 neue Pirelli Reifen</h2>
+  <div class="tyres" id="tyres"><img class="tyre" src="https://www.pirelli.com/tyres/car/next/assets/images?q=75&url=https%3A%2F%2Ftyre24.pirelli.com%2Fdynamic_engine%2Fassets%2Fvisori%2F3_4%2Fszroas.png&w=3840" alt="Pirelli Scorpion Zero All Season Reifen"><img class="tyre" src="https://www.pirelli.com/tyres/car/next/assets/images?q=75&url=https%3A%2F%2Ftyre24.pirelli.com%2Fdynamic_engine%2Fassets%2Fvisori%2F3_4%2Fszroas.png&w=3840" alt="Pirelli Scorpion Zero All Season Reifen"><img class="tyre" src="https://www.pirelli.com/tyres/car/next/assets/images?q=75&url=https%3A%2F%2Ftyre24.pirelli.com%2Fdynamic_engine%2Fassets%2Fvisori%2F3_4%2Fszroas.png&w=3840" alt="Pirelli Scorpion Zero All Season Reifen"><img class="tyre" src="https://www.pirelli.com/tyres/car/next/assets/images?q=75&url=https%3A%2F%2Ftyre24.pirelli.com%2Fdynamic_engine%2Fassets%2Fvisori%2F3_4%2Fszroas.png&w=3840" alt="Pirelli Scorpion Zero All Season Reifen"></div>
+  <div class="product"><strong>Pirelli Scorpion Zero AllSeason</strong><br>245/45 R20 103W XL</div>
+  <div class="value">CHF 800.–</div>
+  <div class="from">für deine neuen Reifen 🛞</div>
+  <div class="actions">
+    <a class="btn" href="https://www.reifenleader.ch/autoreifen/pirelli/scorpion-zero-allseason/245-45-r20-103w-817456" target="_blank" rel="noopener noreferrer">🛞 Details zum Reifen</a>
+    <button class="btn primary" id="whatsapp" type="button">💬 Gutschein einlösen</button>
+  </div>
+</section>
+
+<section class="card closing">
+  Wir wünschen dir ganz viel Freude und für uns alle eine solide und sichere Fahrt voller Zusammenhalt und Wertschätzung.
+  <div class="signature">Alles Liebe zum Geburtstag ❤️<br>Ramin &amp; Olivier</div>
+</section>
+<div class="fine">Mit Liebe für Ramona gemacht.</div>
+</main>
+<script>
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function confetti(){if(reduced)return;const box=document.getElementById('confetti');for(let i=0;i<55;i++){const e=document.createElement('i');e.className='piece';e.style.left=Math.random()*100+'vw';e.style.setProperty('--h',Math.random()*360);e.style.setProperty('--d',(2.8+Math.random()*3)+'s');e.style.setProperty('--r',(Math.random()*180)+'deg');e.style.setProperty('--x',(-120+Math.random()*240)+'px');e.style.animationDelay=(Math.random()*.9)+'s';box.appendChild(e);setTimeout(()=>e.remove(),7000)}}
+setTimeout(confetti,500);
+const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;if(entry.target.id==='message')entry.target.querySelectorAll('p').forEach((p,i)=>setTimeout(()=>p.classList.add('show'),i*430));if(entry.target.id==='gift')entry.target.querySelectorAll('.tyre').forEach(t=>t.classList.add('roll'));obs.unobserve(entry.target)}),{threshold:.25});
+obs.observe(document.getElementById('message'));obs.observe(document.getElementById('gift'));
+document.getElementById('whatsapp').addEventListener('click',()=>{const text='🎁 Ich möchte meinen Geburtstagsgutschein für die neuen Reifen einlösen! 🛞❤️\n\nDanke euch beiden! ❤️';const app='whatsapp://send?text='+encodeURIComponent(text);const web='https://wa.me/?text='+encodeURIComponent(text);location.href=app;setTimeout(()=>{if(!document.hidden)location.href=web},900)});
+</script>
+
+<script>
+(function(){
+ const colors=['#ff70d7','#b86cff','#7b2cbf','#f2c96d','#ffffff','#ff9ee8'];
+ function burst(n=110){
+   for(let i=0;i<n;i++){
+     const c=document.createElement('i'); c.className='confetti';
+     c.style.left=(Math.random()*100)+'vw'; c.style.background=colors[Math.floor(Math.random()*colors.length)];
+     c.style.setProperty('--drift',((Math.random()-.5)*220)+'px');
+     c.style.animationDuration=(3.8+Math.random()*3.8)+'s'; c.style.animationDelay=(Math.random()*1.1)+'s';
+     c.style.width=(6+Math.random()*8)+'px'; c.style.height=(9+Math.random()*14)+'px';
+     document.body.appendChild(c); setTimeout(()=>c.remove(),8500);
+   }
+ }
+ function sparkle(){for(let i=0;i<16;i++){const e=document.createElement('span');e.className='sparkle';e.textContent=Math.random()>.45?'✨':'💜';e.style.left=(10+Math.random()*80)+'vw';e.style.top=(8+Math.random()*55)+'vh';e.style.animationDelay=(Math.random()*.7)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),2400)}}
+ window.addEventListener('load',()=>{burst();sparkle();setTimeout(()=>burst(55),1800);setInterval(()=>burst(28),2400);setInterval(sparkle,6500)});
+})();
+</script>
+</body>
+</html>
